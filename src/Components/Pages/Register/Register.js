@@ -40,6 +40,7 @@ export function Register(){
                 name="img"
                 type="text"
                 placeholder="url da imagem"
+                />
 
 
             <input
