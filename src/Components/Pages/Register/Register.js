@@ -5,11 +5,11 @@ import { useState } from "react"
 export function Register(){
     const navigate = useNavigate();
     const [register, setRegister] = useState({
-        instituição: "",
-        descrição: "",
-        precisamos: "",
-        oferecemos: "",
-        endereço: "",
+        Instituição: "",
+        Descrição: "",
+        Precisamos: "",
+        Oferecemos: "",
+        Endereço: "",
 });
 
 
