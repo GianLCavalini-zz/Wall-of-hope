@@ -5,11 +5,12 @@ import { useState } from "react"
 export function Register(){
     const navigate = useNavigate();
     const [register, setRegister] = useState({
-        instituição: "",
-        descrição: "",
-        precisamos: "",
-        oferecemos: "",
-        endereço: "",
+        Instituição: "",
+        Descrição: "",
+        Precisamos: "",
+        Oferecemos: "",
+        Endereço: "",
+        img:"",
 });
 
 
@@ -36,9 +37,17 @@ export function Register(){
         <div> 
 
             <h1>Registre-se aqui:</h1>
+
+            <input
+                name="img"
+                type="text"
+                placeholder="Cole a URL da sua imagem aqui"
+                onChange={handleChange}
+                value={register.img}
+            />
             
             <input
-                name="instituição" 
+                name="Instituição" 
                 type="text" 
                 placeholder="Instituição"
                 onChange={handleChange}
@@ -47,7 +56,7 @@ export function Register(){
 
 
             <input
-                name="descrição"  
+                name="Descrição"  
                 type="text"
                 placeholder="Descrição" 
                 onChange={handleChange}
@@ -55,7 +64,7 @@ export function Register(){
             />
 
             <input 
-                name="precisamos" 
+                name="Precisamos" 
                 type="text"
                 placeholder="Precisamos de:" 
                 onChange={handleChange}
@@ -63,7 +72,7 @@ export function Register(){
             />
 
             <input 
-                name="oferecemos" 
+                name="Oferecemos" 
                 type="text" 
                 placeholder="Oferecemos:"
                 onChange={handleChange}
@@ -71,7 +80,7 @@ export function Register(){
             />
 
             <input
-                name="endereço" 
+                name="Endereço" 
                 type="text"
                 placeholder="Endereço" 
                 onChange={handleChange}
