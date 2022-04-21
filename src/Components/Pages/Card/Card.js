@@ -5,8 +5,6 @@ import "./card.css"
 export function Card() {
     const [inst, setInst] = useState([])
     
-
-
     useEffect(()=>{
         async function getInst(){
             const response = await axios.get(
@@ -21,7 +19,7 @@ export function Card() {
     return ( 
 
         <div className="Card">
-            <img  src={inst.img} alt={inst.Instituição} style={{maxWidth: "270px", minWidth: "270px", borderRadius: "5%"}} />
+            <img  src={inst.img} alt={inst.Instituição} style={{maxWidth: "300px", minWidth: "300px", borderRadius: "5%"}} />
             <h1>{inst.Instituição}</h1>
             <p>{inst.Descrição}</p>
         </div>
