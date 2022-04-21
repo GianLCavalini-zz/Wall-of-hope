@@ -1,0 +1,14 @@
+.home-background{
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+}
+
+.Home{
+    height: 510px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+}
