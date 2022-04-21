@@ -5,6 +5,7 @@ import { useState } from "react"
 export function Register(){
     const navigate = useNavigate();
     const [register, setRegister] = useState({
+
         img: "",
         Instituição: "",
         Descrição: "",
@@ -12,6 +13,8 @@ export function Register(){
         Oferecemos: "",
         Endereço: "",
         Senha: "",
+        img:"",
+
 });
     function handleChange(e){
         setRegister({...register, [e.target.name]: e.target.value});
@@ -32,10 +35,17 @@ export function Register(){
         <div> 
 
             <h1>Registre-se aqui:</h1>
+
             <input 
                 name="img"
                 type="text"
                 placeholder="url da imagem"
+
+
+            <input
+                name="img"
+                type="text"
+                placeholder="Cole a URL da sua imagem aqui"
                 onChange={handleChange}
                 value={register.img}
             />
