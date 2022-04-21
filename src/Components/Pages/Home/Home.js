@@ -10,7 +10,7 @@ export function Home() {
             </div>
             <div className="Home">
                 <div className= "cardHome">      
-                <Card/>
+                    <Card/>
                 </div>
             </div>
         </div>
