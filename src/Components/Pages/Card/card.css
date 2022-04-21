@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Card{
+    width: 300px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    background-color: rgba(241, 241, 241, 0.479);
+    border-radius: 4%;
+}
+.Card h1{
+    font-size: 16px;
+}
+.Card p{
+    font-size: 11px;
+    color: rgba(63, 63, 63, 0.822);
+}
