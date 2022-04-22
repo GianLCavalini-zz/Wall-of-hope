@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
 
-export function Register(){
+export function Editar(){
+    const params = useParams();
+
     const navigate = useNavigate();
-    const [register, setRegister] = useState({
 
+    const [edit, setEdit] = useState({
         img: "",
         Instituição: "",
         Descrição: "",
@@ -13,41 +16,46 @@ export function Register(){
         Oferecemos: "",
         Endereço: "",
         Senha: "",
-        
-
 });
+//  RESPONSE
+    useEffect(() => {
+        async function getEdit(){
+            const response = await axios.get(`https://ironrest.herokuapp.com/helpinther/${params.id}`);
+            setEdit({ ...response.data }) 
+        };
+        getEdit()
+    
+    }, [])
+    console.log(edit)
+
+
+// INPUTS
     function handleChange(e){
-        setRegister({...register, [e.target.name]: e.target.value});
-        console.log(register)
+        setEdit({[e.target.name]: e.target.value});
+        console.log(edit)
 
     }
     async function handleSubmit(e){
         e.preventDefault();
 
-       await axios.post("https://ironrest.herokuapp.com/helpinther", register)
+       await axios.put(`https://ironrest.herokuapp.com/helpinther/${params.id}`, edit)
 
         navigate("/");
     }
 
+// FORM
     return(
 
 <form onSubmit={handleSubmit}>
         <div> 
 
             <h1>Registre-se aqui:</h1>
-
             <input 
                 name="img"
                 type="text"
                 placeholder="url da imagem"
-
-                />
-            <input
-                name="img"
-                type="text"
-                placeholder="Cole a URL da sua imagem aqui"
                 onChange={handleChange}
-                value={register.img}
+                value={edit.img}
             />
             
             <input
@@ -55,7 +63,7 @@ export function Register(){
                 type="text" 
                 placeholder="Instituição"
                 onChange={handleChange}
-                value={register.Instituição}
+                value={edit.Instituição}
             />
 
 
@@ -64,7 +72,7 @@ export function Register(){
                 type="text"
                 placeholder="Descrição" 
                 onChange={handleChange}
-                value={register.Descrição}
+                value={edit.Descrição}
             />
 
             <input 
@@ -72,7 +80,7 @@ export function Register(){
                 type="text"
                 placeholder="Precisamos de:" 
                 onChange={handleChange}
-                value={register.Precisamos}
+                value={edit.Precisamos}
             />
 
             <input 
@@ -80,7 +88,7 @@ export function Register(){
                 type="text" 
                 placeholder="Oferecemos:"
                 onChange={handleChange}
-                value={register.Oferecemos}
+                value={edit.Oferecemos}
             />
 
             <input
@@ -88,14 +96,14 @@ export function Register(){
                 type="text"
                 placeholder="Endereço" 
                 onChange={handleChange}
-                value={register.Endereço}
+                value={edit.Endereço}
             /> 
             <input 
                 name="Senha"
                 type="text"
                 placeholder="digite sua senha"
                 onChange={handleChange}
-                value={register.Senha}
+                value={edit.Senha}
             />          
             <button type="submit" >Registrar</button>
 
