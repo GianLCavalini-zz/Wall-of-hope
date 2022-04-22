@@ -2,14 +2,37 @@
     margin: 0;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+.likeBtn{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(9, 182, 110);
+    border: 0;
+    border-radius: 100%;
+}
+.infoBtn{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(9, 113, 182);
+    border: 0;
+    border-radius: 100%;
+}
+.deslikeBtn{
+    height: 80px;
+    width: 80px;
+    background-color: rgb(182, 9, 38);
+    border: 0;
+    border-radius: 100%;
+}
+.flexBtns{
+    display: flex;
+    justify-content: space-around;
+}
 .Card{
     width: 300px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
-    
     background-color: rgba(241, 241, 241, 0.479);
     border-radius: 4%;
 }

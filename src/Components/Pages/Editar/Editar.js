@@ -25,7 +25,7 @@ export function Editar(){
         };
         getEdit()
     
-    }, [])
+    }, [params.id])
     console.log(edit)
 
 

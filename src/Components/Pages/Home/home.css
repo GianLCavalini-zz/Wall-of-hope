@@ -1,5 +1,6 @@
 .home-background{
-    width: 1024px;
+    width: 1200px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,24 +8,12 @@
 }
 
 .Home{
-    height: 470px;
+    height: 600px;
     width: 400px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
     background-color: rgb(243, 243, 243);
     box-shadow: 0 0 4em #70867a;
 }
 
-.NavBar{
-    width: 400px;
-    height: 50px;
-    background-color: rgb(9, 182, 110);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 0 4em #70867a;
-}
-.cardHome{
-    margin-top: 10%;
-}
