@@ -13,7 +13,6 @@ export function Register(){
         Contato: "",
         Endereço: "",
         Senha: "",
-        img:"",
 
 });
     function handleChange(e){

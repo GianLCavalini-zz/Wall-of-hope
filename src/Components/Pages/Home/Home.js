@@ -1,5 +1,5 @@
 import { NavBar } from "../../NavBar/NavBar";
-import { Card } from "../Card/Card";
+import { Card } from "../../Card/Card";
 import "./home.css"
 
 export function Home() {
