@@ -31,7 +31,7 @@ export function Favoritos(){
                        console.log(currentInst)
                         return(
                             <li key={currentInst._id}>
-                                {}
+                                {currentInst.instituição}
                                 <button onClick={handleDelete}>X</button>
                             </li>
                         )
