@@ -17,8 +17,16 @@ export function Instituição() {
     console.log(inst)
 
     return ( 
-        <>
-
-        </>
-     );
+        <div class="card mb-3">
+        <img src={inst.img} class="card-img-top" alt={inst.Instituição}/>
+        <div class="card-body">
+            <h2 class="card-title">{inst.Instituição}</h2>
+            <h5 class="card-text">{inst.Descrição}</h5>
+            <li>Endereço: {inst.Endereço};</li>
+            <li>Numero para contato: {inst.Contato}</li>
+            <li>Precisamos de: {inst.Precisamos}</li>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+        </div>
+     ); 
 }

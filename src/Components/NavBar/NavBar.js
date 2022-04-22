@@ -35,7 +35,7 @@ export function NavBar() {
                     <input 
                     className="input"
                     name="digite"
-                    type="text"
+                    type="password"
                     placeholder="sua senha"
                     onChange={handleChange}
                     value={senha}
