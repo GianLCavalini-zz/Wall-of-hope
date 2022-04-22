@@ -10,10 +10,10 @@ export function Register(){
         Instituição: "",
         Descrição: "",
         Precisamos: "",
-        Oferecemos: "",
+        Contato: "",
         Endereço: "",
         Senha: "",
-        
+
 
 });
     function handleChange(e){
@@ -32,14 +32,16 @@ export function Register(){
     return(
 
 <form onSubmit={handleSubmit}>
-        <div> 
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}> 
 
             <h1>Registre-se aqui:</h1>
+
 
             <input 
                 name="img"
                 type="text"
                 placeholder="url da imagem"
+                />
 
                 />
             <input
@@ -49,55 +51,82 @@ export function Register(){
                 onChange={handleChange}
                 value={register.img}
             />
+
+            <div class="col-sm-7">
+                <label for="exampleInputEmail1" class="form-label">Nome da sua instituição</label>
+                <input
+                    class="form-control"
+                    name="Instituição" 
+                    type="text" 
+                    placeholder="Instituição"
+                    onChange={handleChange}
+                    value={register.Instituição}
+                />
+            </div>
             
-            <input
-                name="Instituição" 
-                type="text" 
-                placeholder="Instituição"
-                onChange={handleChange}
-                value={register.Instituição}
-            />
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Sua foto</label>    
+                <input 
+                    class="form-control"
+                    name="img"
+                    type="text"
+                    placeholder="url da imagem"
+                    onChange={handleChange}
+                    value={register.img1}
+                />
+           
+            </div>
 
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="col-sm-7">Informações</label>
+                <input
+                    class="form-control"
+                    name="Descrição"  
+                    type="text"
+                    placeholder="Descrição" 
+                    onChange={handleChange}
+                    value={register.Descrição}
+                />
 
-            <input
-                name="Descrição"  
-                type="text"
-                placeholder="Descrição" 
-                onChange={handleChange}
-                value={register.Descrição}
-            />
+                <input 
+                    class="form-control"
+                    name="Precisamos" 
+                    type="text"
+                    placeholder="Precisamos de:" 
+                    onChange={handleChange}
+                    value={register.Precisamos}
+                />
 
-            <input 
-                name="Precisamos" 
-                type="text"
-                placeholder="Precisamos de:" 
-                onChange={handleChange}
-                value={register.Precisamos}
-            />
+                <input 
+                    class="form-control"
+                    name="Contato" 
+                    type="text" 
+                    placeholder="Contato"
+                    onChange={handleChange}
+                    value={register.Contato}
+                />
 
-            <input 
-                name="Oferecemos" 
-                type="text" 
-                placeholder="Oferecemos:"
-                onChange={handleChange}
-                value={register.Oferecemos}
-            />
-
-            <input
-                name="Endereço" 
-                type="text"
-                placeholder="Endereço" 
-                onChange={handleChange}
-                value={register.Endereço}
-            /> 
-            <input 
-                name="Senha"
-                type="text"
-                placeholder="digite sua senha"
-                onChange={handleChange}
-                value={register.Senha}
-            />          
-            <button type="submit" >Registrar</button>
+                <input
+                    class="form-control"
+                    name="Endereço" 
+                    type="text"
+                    placeholder="Endereço" 
+                    onChange={handleChange}
+                    value={register.Endereço}
+                /> 
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Escolha sua senha</label>
+                <input 
+                    class="form-control"
+                    name="Senha"
+                    type="text"
+                    placeholder="digite sua senha"
+                    onChange={handleChange}
+                    value={register.Senha}
+                />          
+            <button class="btn btn-primary" type="submit" >Registrar</button>
+            </div>
 
         </div>
     </form>

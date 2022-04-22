@@ -53,12 +53,20 @@ export function Card() {
     return ( 
 
         <div className="Card">
-            <img  src={inst.img} alt={inst.Instituição} style={{maxWidth: "300px", minWidth: "300px", borderRadius: "5%"}} />
-            <h1>{inst.Instituição}</h1>
-            <p>{inst.Descrição}</p>
-            <Link to={`/instituicao/${inst._id}`} target="_blank"><button>i</button></Link>
-            <button onClick={clickHandlerFavorites}>{"<3"}</button>
-            <button>X</button>
+
+            <div className="card mb-3">
+            <img src={inst.img} className="d-block w-100"  alt={inst.Instituição} style={{maxHeight: "200px"}}/>      
+            <div class="card-body">
+                <h5 class="card-title" >{inst.Instituição}</h5>
+                <p class="card-text" >{inst.Descrição}</p>
+                <div className="flexBtns">
+                    <button className="deslikeBtn">X</button>
+                    <Link to={`/instituicao/${inst._id}`} target="_blank"><button className="infoBtn">i</button></Link>
+                    <button className="likeBtn">{"<3"}</button>
+                </div>
+            </div>
+            </div>
+
         </div>
      );
 }

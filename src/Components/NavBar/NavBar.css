@@ -1,4 +1,21 @@
-.NavBar{ 
+.Nav{
     display: flex;
-
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.title{
+    font-size: 20px;
+}
+.NavBar{
+    background-color: rgb(9, 182, 110);
+    width: 400px;
+    height: 70px;
+    box-shadow: 0 0 4em #70867a;
+}
+.input{
+    display: flex;
+    align-items: flex-end;
+    height: 30px;
+    width: 175px;
 }
