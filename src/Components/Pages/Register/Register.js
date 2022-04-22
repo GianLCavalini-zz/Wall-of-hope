@@ -43,7 +43,7 @@ export function Register(){
                 placeholder="url da imagem"
                 />
 
-                />
+                
             <input
                 name="img"
                 type="text"
@@ -72,7 +72,7 @@ export function Register(){
                     type="text"
                     placeholder="url da imagem"
                     onChange={handleChange}
-                    value={register.img1}
+                    value={register.img}
                 />
            
             </div>

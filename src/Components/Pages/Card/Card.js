@@ -62,7 +62,7 @@ export function Card() {
                 <div className="flexBtns">
                     <button className="deslikeBtn">X</button>
                     <Link to={`/instituicao/${inst._id}`} target="_blank"><button className="infoBtn">i</button></Link>
-                    <button className="likeBtn">{"<3"}</button>
+                    <button  onClick={clickHandlerFavorites} className="likeBtn">{"<3"}</button>
                 </div>
             </div>
             </div>
