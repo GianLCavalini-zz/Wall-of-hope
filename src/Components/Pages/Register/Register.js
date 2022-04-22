@@ -14,6 +14,7 @@ export function Register(){
         Endereço: "",
         Senha: "",
 
+
 });
     function handleChange(e){
         setRegister({...register, [e.target.name]: e.target.value});
@@ -42,7 +43,7 @@ export function Register(){
                 placeholder="url da imagem"
                 />
 
-
+                />
             <input
                 name="img"
                 type="text"
