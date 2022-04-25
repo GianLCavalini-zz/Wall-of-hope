@@ -34,6 +34,23 @@ export function Register(){
         <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}> 
 
             <h1>Registre-se aqui:</h1>
+
+
+            <input 
+                name="img"
+                type="text"
+                placeholder="url da imagem"
+                />
+
+                
+            <input
+                name="img"
+                type="text"
+                placeholder="Cole a URL da sua imagem aqui"
+                onChange={handleChange}
+                value={register.img}
+            />
+
             <div class="col-sm-7">
                 <label for="exampleInputEmail1" class="form-label">Nome da sua instituição</label>
                 <input
@@ -54,7 +71,7 @@ export function Register(){
                     type="text"
                     placeholder="url da imagem"
                     onChange={handleChange}
-                    value={register.img1}
+                    value={register.img}
                 />
            
             </div>
